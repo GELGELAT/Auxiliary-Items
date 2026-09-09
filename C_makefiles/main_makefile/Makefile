@@ -2,9 +2,9 @@
 # ПУТИ
 # ========================================
 CC = gcc
-BUILD_DIR = build # папка куда компилить .o .d файлы
-SRC_DIRS =  #<---------- папки где ищем .c файлы
-TARGET = .exe #<---------- что компилим
+BUILD_DIR = build
+SRC_DIRS =  #<------------- folders with .c files
+TARGET = .exe #<------------- program name
 
 # ========================================
 # ПОИСК .c ФАЙЛОВ
@@ -47,11 +47,12 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
-# ПРАВИЛО ДЛЯ ОБЪЕКТНЫХ ФАЙЛОВ (РАБОТАЕТ ДЛЯ ПОДПАПОК)
-$(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
+# ПРАВИЛО ДЛЯ ОБЪЕКТНЫХ ФАЙЛОВ (БЕЗ ЯВНЫХ ЗАВИСИМОСТЕЙ!)
+$(BUILD_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# ПРАВИЛО ДЛЯ СОЗДАНИЯ ПАПКИ BUILD (ОТДЕЛЬНО)
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 

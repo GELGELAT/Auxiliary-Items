@@ -5,8 +5,7 @@
             "name": "Debug",
             "type": "cppdbg",
             "request": "launch",
-            // ★ <--------- Укажите имя вашего исполняемого файла
-            "program": "${workspaceFolder}/parenthesis_balance.exe",
+            "program": "${workspaceFolder}/.exe", //<---- program name
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
