@@ -80,7 +80,7 @@ int cmp_double(const void *a,const void *b)
 {
     double x = *(const double*)a;
     double y = *(const double*)b;
-    if (fabsf(x-y)<EPSILON_D)
+    if (fabs(x-y)<EPSILON_D)
     {
         return 0;
     }
