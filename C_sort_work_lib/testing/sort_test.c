@@ -16,8 +16,10 @@ int main(void)
     }
     printf("\n");
     */
-    char *a = "abc";
-    char *b = "cba";
+    char *a = "a";
+    char *b = "c";
+    printf("%s,%s\n",a,b);
+
     swap_two_any(a,b,sizeof(char));
-    printf("%s",a);
+    printf("%s,%s\n",a,b);
 }
