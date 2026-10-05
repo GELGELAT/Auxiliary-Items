@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "rand_main.h"
 
-float* create_rand_with_in_arr_f(int amount, float min,float max)
+float* rand_arr_create_with_in_f(int amount, float min,float max)
 {
     float* arr = malloc(sizeof(float)*amount);
     for(int i =0;i<amount;i++)

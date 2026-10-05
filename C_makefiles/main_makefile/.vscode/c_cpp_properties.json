@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**" //<--------"**"
+                "${workspaceFolder}//**" // в /name/ вместо name имя папки где см всу
             ],
             "defines": [
                 "_DEBUG",

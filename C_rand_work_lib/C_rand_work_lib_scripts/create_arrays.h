@@ -1,7 +1,8 @@
 #ifndef CREATE_ARRAYS_H
 #define CREATE_ARRAYS_H
 
-float *create_rand_with_in_arr_f(int amount, float min, float max);
+
+float *rand_arr_create_with_in_f(int amount, float min, float max);
 
 double *rand_arr_create_with_in_d(int amount, float min, float max);
 
